@@ -2,7 +2,7 @@
 ## In a memory of Aaron Swartz.
 	
 ``` bash
-mkdir Aaron && cd \$_
+mkdir Aaron && cd $_
 git clone https://github.com
 cd menu-Aaron
 chmod +x menu-Aaron.sh
