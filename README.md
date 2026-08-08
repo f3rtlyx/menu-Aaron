@@ -2,11 +2,11 @@
 ## In a memory of Aaron Swartz.
 	
 ``` bash
-mkdir Aaron && cd $_
-git clone https://github.com
+mkdir Aaron && cd $_ 
+git clone https://github.com/f3rtlyx/menu-Aaron 
 cd menu-Aaron
-chmod +x menu-Aaron.sh
-./menu-Aaron.sh
+ chmod 700 * 
+./menu-Aaron.sh 
 ```
 
 * My contact <Tg>: @ced_Oyd 

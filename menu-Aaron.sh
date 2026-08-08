@@ -1,6 +1,8 @@
 #!/bin/bash
 grn='\033[0;32m' #Add Color of Assembly 033[0;32m
 printf "${grn}\n"
+sleep 0.3;
+clear;
 echo "Welcome To Aaron-menu v1.0 | Created By f3rtlyx"
 echo " "
 echo "======================================================"
@@ -8,9 +10,9 @@ echo " "
 echo "   **** Aaron-menu - My Special auto-Programm for Tools **** "
 echo " "
 echo "======================================================"
-echo " "
-echo "###################################################### "
-echo " "
+echo ""
+figlet Aaron Will Live
+echo ""
 echo "[01] Update Linux/Termux " #apt update && apt upgrade
 echo "[02] Upgrade Linux/Termux " #pkg update && pkg upgrade
 echo "[03] Update other Tools " #py && py2 && nano && git && vi && bye...
@@ -22,7 +24,15 @@ echo "[08] Updating X11-repo " #pkg install x11
 echo "[09] search package " #pkg search
 echo "[10] Turn on/off by time-out (WiFi)" #soupnazi
 echo "[11] hex-dump " # cat /dev/random | hexdump
-echo "[12] Nmap-ping " #nmap -p 6777
+echo "[12] Nmap-ping " #nmap -p ..
+echo "[13] in development "
+echo "[14] in development "
+echo "[15] in development "
+echo "[16] in development "
+echo "[17] in development "
+echo "[18] in development "
+echo "[19] in development "
+echo "[20] in development "
 echo "[i] Info && contact "  #@ced_Oyd
 echo "[X] Exit the Tool " #exit
 echo "[U] Update the Tool " #git clone...
