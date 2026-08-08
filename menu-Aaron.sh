@@ -1,11 +1,11 @@
 #!/bin/bash
 grn='\033[0;32m' #Add Color of Assembly 033[0;32m
 printf "${grn}\n"
-echo "Welcome To NightFrag v0.1 | Created By f3rtlyx"
+echo "Welcome To Aaron-menu v1.0 | Created By f3rtlyx"
 echo " "
 echo "======================================================"
 echo " "
-echo "   **** NighFrag - My Special Programm for Tools **** "
+echo "   **** Aaron-menu - My Special auto-Programm for Tools **** "
 echo " "
 echo "======================================================"
 echo " "
@@ -73,7 +73,7 @@ echo " "
 ####
 echo " "
         elif [ "$nmp" = "X" ]; then
- clear && ./NightFrag.sh
+ clear && ./Aaron-menu.sh
  else
 clear && echo "[!] Invalid option "
     fi
@@ -119,7 +119,7 @@ read -p "Select file to safe a output hexdump: " hex
  mkdkr nightfrag-log && cd $_ "$hex"
   cat /dev/random | hexdump -c >> "$hex"
  else [ "$fld" = "X" ];
-clear && ./NightFrag.sh
+clear && ./Aaron-menu.sh
  fi
 }
 function_hex
@@ -134,7 +134,7 @@ read -p "Select your [Y/N]: " wfNazi
 echo "-----------------------------------------------------"
 read -p "Select Enable/Disable a adapter [e]/[d]: " wfd
 elif [ "$wfNazi" = "N" ]; then
-clear && ./NightFrag.sh
+clear && ./Aaron-menu.sh
 #
  fi
 }
@@ -209,8 +209,17 @@ function_fds
  elif [ "$uPd" = "X" ]; then
  clear
  elif [ "$uPd" = "U" ]; then
- echo "git clone https:// "
- echo "[*] update successfull "
+    echo -e "\n\e[1;33m[*] update tools of GitHub...\e[0m"
+    if git pull origin main; then
+        echo -e "\n\e[1;32m[*] Success update GitHub!\e[0m"
+        echo "reload a tool"
+        sleep 3
+        exit 0
+    else
+        echo -e "\n\e[1;31m[Er -1] update is not successfull\e[0m"
+        sleep 3
+    fi
+
 else
  clear && echo "[i] Invalid option "
  fi
