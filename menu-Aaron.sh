@@ -5,11 +5,11 @@ sleep 0.3;
 clear;
 echo "Welcome To Aaron-menu v1.0 | Created By f3rtlyx"
 echo " "
-echo "======================================================"
+echo "=============================================================================="
 echo " "
 echo "   **** Aaron-menu - My Special auto-Programm for Tools **** "
 echo " "
-echo "======================================================"
+echo "=============================================================================="
 echo ""
 figlet Aaron Will Live
 echo ""
@@ -37,7 +37,7 @@ echo "[i] Info && contact "  #@ced_Oyd
 echo "[X] Exit the Tool " #exit
 echo "[U] Update the Tool " #git clone...
 echo " "
-echo "------------------------------------------------------ "
+echo "------------------------------------------------------------------------ "
 echo " "
 read -p "Select your option: " uPd
 function_Miami() {
@@ -47,7 +47,7 @@ echo "[*] update successfull "
   elif [ "$uPd" = "12" ]; then
  clear && echo "Nmap-ping && Nmaping | created by "
  echo " "
- echo "##################################################### "
+ echo "####################################################################### "
   echo " "
          echo "[1] ports"
          echo "[2] Devices "
@@ -62,11 +62,11 @@ echo "[*] update successfull "
     if [ "$nmp" = "1" ]; then
    clear
 #
-echo "---------------------------------------------------- "
+echo "------------------------------------------------------------------------ "
  echo " "
  	echo "   	Nmap with flag '-p' | soupnazi "
  echo " "
-echo "---------------------------------------------------- "
+echo "------------------------------------------------------------------------ "
   echo " "
  read -p "Select port for listen: " prt
  nmap -p "$prt"
@@ -83,7 +83,7 @@ echo " "
 ####
 echo " "
         elif [ "$nmp" = "X" ]; then
- clear && ./Aaron-menu.sh
+ clear && ./menu-Aaron.sh
  else
 clear && echo "[!] Invalid option "
     fi
@@ -109,7 +109,7 @@ clear && echo " " && echo " " && echo " " && echo " " && echo " " && echo " " &&
  clear && echo "[!] Press Enter for * commands "
 read -p "search pkg: " srch
  pkg search "$srch"
-####################################
+#############################################################################
  elif [ "$uPd" = "11" ]; then
 clear && echo "hexdump | Created by f3rtlyx"
 echo ""
@@ -117,7 +117,7 @@ echo ""
    echo "!Hex-dump be save just to su file! "
  echo "[X] back "
 echo " "
- echo "######################################################"
+ echo "####################################################################################"
  echo " "
 read -p "Select file to safe a output hexdump: " hex
  read -p "Press 'S' to start " fld
@@ -129,7 +129,7 @@ read -p "Select file to safe a output hexdump: " hex
  mkdkr nightfrag-log && cd $_ "$hex"
   cat /dev/random | hexdump -c >> "$hex"
  else [ "$fld" = "X" ];
-clear && ./Aaron-menu.sh
+clear && ./menu-Aaron.sh
  fi
 }
 function_hex
@@ -141,10 +141,10 @@ read -p "Select your [Y/N]: " wfNazi
 #furst_function
  function_soupnazi() {
  if [ "$wfNazi" = "Y" ]; then
-echo "-----------------------------------------------------"
+echo "------------------------------------------------------------------------"
 read -p "Select Enable/Disable a adapter [e]/[d]: " wfd
 elif [ "$wfNazi" = "N" ]; then
-clear && ./Aaron-menu.sh
+clear && ./menu-Aaron.sh
 #
  fi
 }
@@ -195,24 +195,15 @@ function_fds
 #end of function wifi-adapter
 #
  elif [ "$uPd" = "i" ]; then
- clear && echo "Information of this Tools: NightFrag version 0.1 "
+ clear && echo "Information of this Tools: menu-Aaron.sh version 1.0 "
  echo "Created By f3rtlyx. "
- echo "------------------------------------------------------ "
-  echo "[01] apt update && apt update "
-  echo "[02] pkg update && pkg upgrade "
-  echo "[03] i'm lazy (@_0) "
-  echo "[04] termux-setup-storage "
-  echo "[05] termux-change-repo "
-  echo "[06] neofetch "
-  echo "[07]  "
-  echo "[08]  "
-  echo "[09] pkg search "
-  echo "[10] i'm Lazy "
+ echo "------------------------------------------------------------------------- "
+  echo ""
+  echo "[0-20] Commands "
   echo "[i] info {#_#}"
   echo "[X] clear"
-  echo "[U] git clone https://github"
+  echo "[U] git clone https://github/f3rtlyx/menu-Aaron.git"
  echo ""
- echo "****************************************************** "
  echo " "
  echo "About us "
  echo "My contact: ‹Tg› @ced_Oyd "
