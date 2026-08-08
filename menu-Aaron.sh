@@ -210,6 +210,7 @@ function_fds
  clear
  elif [ "$uPd" = "U" ]; then
     echo -e "\n\e[1;33m[*] update tools of GitHub...\e[0m"
+       git remote set-url origin https://github.com
     if git pull origin main; then
         echo -e "\n\e[1;32m[*] Success update GitHub!\e[0m"
         echo "reload a tool"
