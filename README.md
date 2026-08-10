@@ -1,9 +1,9 @@
 ## This automatically-Tool for Termux/Linux-Unix.
-## In a memory of Aaron Swartz.
+# In a memory of Aaron Swartz.
 	
 ``` bash
 mkdir Aaron && cd $_ 
-git clone https://github.com/f3rtlyx/menu-Aaron 
+git clone https://github.com/f3rtlyx/menu-Aaron.git
 cd menu-Aaron
  chmod 700 * 
 ./menu-Aaron.sh 
