@@ -10,8 +10,9 @@ cd menu-Aaron
 ```
 
 * About us
-* *My contact: <Tg> @ced_Oyd & [My Telegram Channel](https://t.me/F3rTlyX)*
-* *My GitHub: [://github.com](https://://github.com/f3rtlyx/menu-Aaron.git)*
+* My contact ‹Tg› @ced_Oyd
+* **My Telegram Channel:** [F3RtlyX](https://t.me/F3rTlyX)
+* **My GitHub:** [menu-Aaron](https://github.com/f3rtlyx/menu-Aaron.git)
 
 Bye..
 
