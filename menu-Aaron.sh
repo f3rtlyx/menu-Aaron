@@ -1,17 +1,18 @@
 #!/bin/bash
 grn='\033[0;32m' #Add Color of Assembly 033[0;32m
 printf "${grn}\n"
-sleep 0.3;
+sleep 0.4;
 clear;
+#while true; do
 echo "Welcome To Aaron-menu v1.0 | Created By f3rtlyx"
 echo " "
 echo "=============================================================================="
 echo " "
-echo "   **** Aaron-menu - My Special auto-Programm for Tools **** "
+echo "        **** Aaron-menu - My Special auto-Programm for Tools **** "
 echo " "
 echo "=============================================================================="
 echo ""
-figlet Aaron Will Live
+figlet Aaron Will Live;
 echo ""
 echo "[01] Update Linux/Termux " #apt update && apt upgrade
 echo "[02] Upgrade Linux/Termux " #pkg update && pkg upgrade
@@ -25,7 +26,7 @@ echo "[09] search package " #pkg search
 echo "[10] Turn on/off by time-out (WiFi)" #soupnazi
 echo "[11] hex-dump " # cat /dev/random | hexdump
 echo "[12] Nmap-ping " #nmap -p ..
-echo "[13] in development "
+echo "[13] See information to apt "
 echo "[14] in development "
 echo "[15] in development "
 echo "[16] in development "
@@ -41,11 +42,16 @@ echo "------------------------------------------------------------------------ "
 echo " "
 read -p "Select your option: " uPd
 function_Miami() {
- if [ "$uPd" = "1" ]; then
+ if [ "$uPd" == "1" ]; then
    apt update && pkg update -y
 echo "[*] update successfull "
-  elif [ "$uPd" = "12" ]; then
- clear && echo "Nmap-ping && Nmaping | created by "
+  elif [ "$uPd" == "13" ]; then
+sleep 0.4;
+ clear && apt list --upgradable
+  elif [ "$uPd" == "12" ]; then
+sleep 0.4;
+ clear;
+echo "Nmap-ping && Nmaping | created by "
  echo " "
  echo "####################################################################### "
   echo " "
@@ -89,29 +95,33 @@ clear && echo "[!] Invalid option "
     fi
  }
  function_nmap
- elif [ "$uPd" = "2" ]; then
+ elif [ "$uPd" == "2" ]; then
   apt upgrade && pkg upgrade -y
 echo "[*] upgrade successfull "
- elif [ "$uPd" = "3" ]; then
+ elif [ "$uPd" == "3" ]; then
  pkg install python && pkg install python2 && pkg install wget && pkg install w3m && pkg install git && pkg install nano && pkg install mpv
 echo "[*] upgrade successfull "
- elif [ "$uPd" = "4" ]; then
+ elif [ "$uPd" == "4" ]; then
  termux-setup-storage
- elif [ "$uPd" = "5" ]; then
+ elif [ "$uPd" == "5" ]; then
  termux-change-repo
- elif [ "$uPd" = "6" ]; then
+ elif [ "$uPd" == "6" ]; then
 clear && echo " " && echo " " && echo " " && echo " " && echo " " && echo " " && neofetch
- elif [ "$uPd" = "7" ]; then
+ elif [ "$uPd" == "7" ]; then
  pkg install root-repo
- elif [ "$uPd" = "8" ]; then
+ elif [ "$uPd" == "8" ]; then
  pkg install x11-repo
- elif [ "$uPd" = "9" ]; then
- clear && echo "[!] Press Enter for * commands "
+ elif [ "$uPd" == "9" ]; then
+sleep 0.4;
+ clear;
+echo "[!] Press Enter for * commands "
 read -p "search pkg: " srch
  pkg search "$srch"
 #############################################################################
- elif [ "$uPd" = "11" ]; then
-clear && echo "hexdump | Created by f3rtlyx"
+ elif [ "$uPd" == "11" ]; then
+sleep 0.4;
+clear;
+ echo "hexdump | Created by f3rtlyx"
 echo ""
  echo "[!] Warning: Write a file with '.txt', '.sh' & '.py' "
    echo "!Hex-dump be save just to su file! "
@@ -123,67 +133,72 @@ read -p "Select file to safe a output hexdump: " hex
  read -p "Press 'S' to start " fld
  echo " "
  echo "[I] file be saved to /home/data/  "
-#cat /dev/random | hexdump -c
+#cat /dev/random | hexdump -d
  function_hex() {
  if [ "$fld" = "S" ]; then
- mkdkr nightfrag-log && cd $_ "$hex"
-  cat /dev/random | hexdump -c >> "$hex"
+ mkdir Aaron_logs && cd $_ "$hex"
+  cat /dev/random | hexdump -d >> "$hex"
  else [ "$fld" = "X" ];
-clear && ./menu-Aaron.sh
+sleep 0.4;
+clear;
+./menu-Aaron.sh;
  fi
 }
 function_hex
 ################################################################
- elif [ "$uPd" = "10" ]; then
+ elif [ "$uPd" == "10" ]; then
 #Function_wfNazi --- wifi-adapter::soupnazi
- clear && echo "Info: Disabled/Enable wifi-adapter on device. For Example: Select: Y=Yes/N=No "
+sleep 0.4;
+ clear;
+ echo "Info: Disabled/Enable wifi-adapter on device. For Example: Select: Y=Yes/N=No "
 read -p "Select your [Y/N]: " wfNazi
 #furst_function
  function_soupnazi() {
- if [ "$wfNazi" = "Y" ]; then
+ if [ "$wfNazi" == "Y" ]; then
 echo "------------------------------------------------------------------------"
 read -p "Select Enable/Disable a adapter [e]/[d]: " wfd
-elif [ "$wfNazi" = "N" ]; then
+elif [ "$wfNazi" == "N" ]; then
+sleep 0.4;
 clear && ./menu-Aaron.sh
 #
  fi
 }
 function_soupnazi
 function_wfe() {
- if [ "$wfd" = "d" ]; then
+ if [ "$wfd" == "d" ]; then
 echo " "
 read -p "[1]Weeks/[2]Days/[3]Hours/[4]Minutes/[5]Seconds: " wf
- elif [ "$wfd" = "e" ]; then
+ elif [ "$wfd" == "e" ]; then
 termux-wifi-enable true
 fi
 }
 function_wfe
 function_fds() {
-if [ "$wf" = "1" ]; then
+if [ "$wf" == "1" ]; then
 echo " "
 read -p "Select weeks: " wfl
    sec=$((604800 * wfl))
 termux-wifi-enable false && sleep "$sec"
 termux-wifi-enable true
- elif [ "$wf" = "2" ]; then
+ elif [ "$wf" == "2" ]; then
 echo " "
 read -p "Select Days: " wfl
    sec=$((86400 * wfl))
 termux-wifi-enable false && sleep "$sec"
 termux-wifi-enable true
- elif [ "$wf" = "3" ]; then
+ elif [ "$wf" == "3" ]; then
 echo " "
 read -p "Select Hours: " wfl
   sec=$((3600 * wfl))
 termux-wifi-enable false && sleep "$sec"
 termux-wifi-enable true
- elif [ "$wf" = "4" ]; then
+ elif [ "$wf" == "4" ]; then
 echo " "
 read -p "Select minutes: " wfl
   sec=$((60 * wfl))
 termux-wifi-enable false && sleep "$sec"
 termux-wifi-enable true
- elif [ "$wf" = "5" ]; then
+ elif [ "$wf" == "5" ]; then
 echo " "
 read -p "Select seconds: " wfl
 termux-wifi-enable false && sleep "$wfl"
@@ -194,37 +209,47 @@ function_fds
 # termux-wifi-enable true
 #end of function wifi-adapter
 #
- elif [ "$uPd" = "i" ]; then
- clear && echo "Information of this Tools: menu-Aaron.sh version 1.0 "
+ elif [ "$uPd" == "i" ]; then
+sleep 0.4;
+ clear;
+ echo "Information of this Tools: menu-Aaron.sh version 1.0 "
  echo "Created By f3rtlyx. "
  echo "------------------------------------------------------------------------- "
   echo ""
   echo "[0-20] Commands "
   echo "[i] info {#_#}"
   echo "[X] clear"
-  echo "[U] git clone https://github/f3rtlyx/menu-Aaron.git"
+  echo "[U] git clone https://github/f3rtlyx/menu-Aaron"
  echo ""
- echo " "
+ echo ""
  echo "About us "
- echo "My contact: ‹Tg› @ced_Oyd "
- elif [ "$uPd" = "X" ]; then
- clear
- elif [ "$uPd" = "U" ]; then
+ echo "My contact: ‹Tg› @ced_Oyd && My Telegramm-channel: https://t.me/F3rTlyX. "
+ echo "My GitHub: https://github.com/f3rtlyx or https://github.com/f3rtlyx/menu-Aaron.git "
+ echo ""
+ echo ""
+ elif [ "$uPd" == "x" ] || [ "$uPd" == "x" ]; then
+  sleep 0.4;
+ clear;
+#echo "© Copyright 2003"
+#echo "Created By f3rtlyx | bye.."
+exit 0;
+ elif [ "$uPd" == 'U' ] || [ "$uPd" == "u" ]; then
     echo -e "\n\e[1;33m[*] update tools of GitHub...\e[0m"
-       git remote set-url origin https://github.com
+       git remote set-url origin https://github.com/f3rtlyx/menu-Aaron.git
     if git pull origin main; then
         echo -e "\n\e[1;32m[*] Success update GitHub!\e[0m"
         echo "reload a tool"
-        sleep 3
+        sleep 3;
         exit 0
     else
         echo -e "\n\e[1;31m[Er -1] update is not successfull\e[0m"
-        sleep 3
+        sleep 3;
     fi
-
 else
- clear && echo "[i] Invalid option "
+ clear && echo "[!] Warning: Invalid option. "
+ sleep 0.3;
  fi
+#done
 }
 function_Miami
 echo "© Copyright 2003"

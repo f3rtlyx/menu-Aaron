@@ -9,6 +9,9 @@ cd menu-Aaron
 ./menu-Aaron.sh 
 ```
 
-* My contact <Tg>: @ced_Oyd 
+* About us
+* *My contact: <Tg> @ced_Oyd & [My Telegram Channel](https://t.me/F3rTlyX)*
+* *My GitHub: [://github.com](https://://github.com/f3rtlyx/menu-Aaron.git)*
+
 Bye..
 
